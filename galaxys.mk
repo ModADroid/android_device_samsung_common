@@ -54,9 +54,8 @@ PRODUCT_PACKAGES += \
 # Libs
 PRODUCT_PACKAGES += \
     libaudio \
-    liboverlay \
+    copybit.s5pc110 \
     libs3cjpeg \
-    libstagefrighthw \
     sec_mm \
     libstagefrighthw
 #    libcamera \
