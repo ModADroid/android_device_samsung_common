@@ -25,8 +25,8 @@ PRODUCT_LOCALES := hdpi
 # media profiles and capabilities spec
 $(call inherit-product, device/samsung/common/media_a1026.mk)
 # media config xml file
-PRODUCT_COPY_FILES += \
-    device/samsung/common/media_profiles.xml:system/etc/media_profiles.xml
+#PRODUCT_COPY_FILES += \
+#    device/samsung/common/media_profiles.xml:system/etc/media_profiles.xml
 
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
