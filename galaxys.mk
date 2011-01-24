@@ -58,9 +58,8 @@ PRODUCT_PACKAGES += \
     libs3cjpeg \
     libstagefrighthw \
     sec_mm \
-    libcamera \
     libstagefrighthw
+#    libcamera \
 
-
-$(call inherit-product, build/target/product/full_base.mk)
+$(call inherit-product, build/target/product/full.mk)
 
