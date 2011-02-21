@@ -54,12 +54,12 @@ PRODUCT_PACKAGES += \
 # Libs
 PRODUCT_PACKAGES += \
     libaudio \
+    libaudiopolicy \
     sec_mm \
     libstagefrighthw \
     copybit.s5pc110 \
     libs3cjpeg \
     lights.s5pc110
-#    libcamera \
 
 $(call inherit-product, build/target/product/full.mk)
 
