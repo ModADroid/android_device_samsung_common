@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
     sec_mm \
     libstagefrighthw \
     copybit.s5pc110 \
-    libs3cjpeg
+    libs3cjpeg \
+    lights.s5pc110
 #    libcamera \
 
 $(call inherit-product, build/target/product/full.mk)
