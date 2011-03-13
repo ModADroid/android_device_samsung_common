@@ -688,7 +688,7 @@ const char *AudioHardware::getVoiceRouteFromDevice(uint32_t device)
 const char *AudioHardware::getInputRouteFromDevice(uint32_t device)
 {
     if (mMicMute) {
-        return "Off";
+        return "OFF";
     }
 	 switch (device) {
       case AudioSystem::DEVICE_IN_BUILTIN_MIC:
