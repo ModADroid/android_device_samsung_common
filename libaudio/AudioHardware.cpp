@@ -434,7 +434,7 @@ status_t AudioHardware::setVoiceVolume(float volume)
             const char* name = (device == AudioSystem::DEVICE_OUT_EARPIECE ? "Playback Volume":"Playback Spkr Volume");
             LOGV("setVoiceVolume() set %s to %f", name, volume);
             TRACE_DRIVER_IN(DRV_MIXER_SET)
-            mixer_ctl_set(ctl, volume * 200);
+            mixer_ctl_set(ctl, volume * 100);
             TRACE_DRIVER_OUT
         }
     }
@@ -457,7 +457,7 @@ status_t AudioHardware::setMasterVolume(float volume)
         if (ctl != NULL) {
             LOGV("setMasterVolume() set Playback Spkr Volume to %f", volume);
             TRACE_DRIVER_IN(DRV_MIXER_SET)
-            mixer_ctl_set(ctl, volume * 200);
+            mixer_ctl_set(ctl, volume * 100);
             TRACE_DRIVER_OUT
             return NO_ERROR;
         }
