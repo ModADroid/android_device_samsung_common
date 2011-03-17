@@ -59,7 +59,8 @@ PRODUCT_PACKAGES += \
     libstagefrighthw \
     copybit.s5pc110 \
     libs3cjpeg \
-    lights.s5pc110
+    lights.s5pc110 \
+    overlay.s5pc110
 
 $(call inherit-product, build/target/product/full.mk)
 
