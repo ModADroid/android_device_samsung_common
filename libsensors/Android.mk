@@ -12,22 +12,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+ifeq ($(TARGET_IS_GALAXYS),true)
+LOCAL_PATH := $(call my-dir)
 
-LOCAL_PATH:= $(call my-dir)
-# HAL module implemenation, not prelinked and stored in
-# hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
+ifneq ($(TARGET_SIMULATOR),true)
+
+# HAL module implemenation, not prelinked, and stored in
+# hw/<SENSORS_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
+
+LOCAL_MODULE := sensors.aries
+
+LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_SRC_FILES := lights.c
+LOCAL_CFLAGS := -DLOG_TAG=\"Sensors\"
+LOCAL_SRC_FILES := 						\
+				sensors.cpp 			\
+				SensorBase.cpp			\
+				LightSensor.cpp			\
+				ProximitySensor.cpp		\
+				AkmSensor.cpp                   \
+				GyroSensor.cpp                  \
+                                InputEventReader.cpp
 
+LOCAL_SHARED_LIBRARIES := liblog libcutils libdl
 LOCAL_PRELINK_MODULE := false
-LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
-
-LOCAL_SHARED_LIBRARIES := liblog
-
-#LOCAL_MODULE := lights.$(TARGET_BOARD_PLATFORM)
-LOCAL_MODULE := lights.s5pc110
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif # !TARGET_SIMULATOR
+endif

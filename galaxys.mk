@@ -60,7 +60,9 @@ PRODUCT_PACKAGES += \
     copybit.s5pc110 \
     libs3cjpeg \
     lights.s5pc110 \
-    overlay.s5pc110
+    overlay.s5pc110 \
+    libcamera \
+    gps.aries
 
 $(call inherit-product, build/target/product/full.mk)
 
