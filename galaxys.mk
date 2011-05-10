@@ -22,12 +22,6 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 # Galaxy S uses high-density artwork where available
 PRODUCT_LOCALES := hdpi
 
-# media profiles and capabilities spec
-$(call inherit-product, device/samsung/common/media_a1026.mk)
-# media config xml file
-#PRODUCT_COPY_FILES += \
-#    device/samsung/common/media_profiles.xml:system/etc/media_profiles.xml
-
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
