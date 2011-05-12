@@ -10,7 +10,7 @@ LOCAL_SRC_FILES := \
 LOCAL_CFLAGS += $(PV_CFLAGS_MINUS_VISIBILITY)
 
 LOCAL_C_INCLUDES:= \
-      $(LOCAL_PATH)/../include/openmax \
+      $(TOP)/frameworks/base/include/media/stagefright/openmax \
       $(LOCAL_PATH)/../include \
       $(LOCAL_PATH)/../liboverlay
 
